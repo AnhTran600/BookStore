@@ -1,0 +1,25 @@
+<p>
+  booklist works!
+</p>
+<h2>Books List</h2>
+<table class="table table-striped table-bordered">
+  <tr style="background: red">
+    <th>ID</th>
+    <th>TITLE</th>
+    <th>AUTHOR</th>
+    <th>PRICE</th>
+    <th>ACTIONS</th>
+  </tr>
+  <tr *ngFor = "let book of books">
+      <td>{{book.id}}</td>
+      <td>{{book.title}}</td>
+      <td>{{book.author}}</td>
+      <td>{{book.price}}</td>
+      <td><button (click) = "getBook(book.id)" class="btn btn-success"> Edit </button>
+      &nbsp;&nbsp;
+      <button (click) = "deleteBook(book.id)" class="btn btn-warning"> Delete </button></td>
+  </tr>
+  <tr *ngIf = "books && books.length == 0">
+    <td colspan="3">no records found</td>
+  </tr>
+</table>

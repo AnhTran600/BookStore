@@ -1,0 +1,30 @@
+<!--     NAVBAR     -->
+<nav class="navbar navbar-expand-sm navbar-light bg-light ">
+    <a class="navbar-brand" href="#">Grizzly Store</a>
+    <a class="navbar-brand" href="http://revature.com">
+      <img src="/assets/revlogo.png" style="position:absolute;left:150;top:0; height:50px" alt="Revaturelogo"></a>
+       
+    <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- collapse will be not allow overlapping-->
+        <ul class="navbar-nav mr-auto">  </ul> <!-- It will expand the items mr= margin-right-->
+
+        <ul class="nav nav-tabs">                
+          <li routerLinkActive="active">
+            <a routerLink="Home" style="padding-left:100px">Home</a>
+          </li>                
+          <li routerLinkActive="active">                    
+            <a routerLink="Book" style="padding-left:100px">Add </a>
+          </li>                
+          <li routerLinkActive="active">                   
+            <a routerLink="BookList" style="padding-left:100px">List </a>
+          </li>
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0"> <!-- m stands for margin and y (top+bottom)-->
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-warning my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <a href="booktable.html"><button type="button" class="btn btn-danger ml-4">Book Link</button></a>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
